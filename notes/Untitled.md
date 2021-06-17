@@ -1,11 +1,12 @@
 ---
-attachments: [雪冬头.png, Wons.png]
+attachments: [雪冬头.png, Clipboard_2021-06-17-14-45-32.png, Wons.png]
 tags: [神圣宇宙]
-title: Wons·Retniw/雪冬
+title: Untitled
 created: '2021-01-01T07:04:46.211Z'
-modified: '2021-03-17T02:57:55.365Z'
+modified: '2021-06-17T06:45:32.911Z'
 ---
 
+![](@attachment/Clipboard_2021-06-17-14-45-32.png)
 # Wons·Retniw/雪冬
 <p align="center">
   <img src="@attachment/Wons.png" width="650">
