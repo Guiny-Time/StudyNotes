@@ -1,13 +1,14 @@
 ---
-attachments: [Clipboard_2021-06-17-13-41-28.png, Clipboard_2021-06-17-14-09-04.png, Clipboard_2021-06-17-14-11-21.png, Clipboard_2021-06-17-14-18-01.png, Clipboard_2021-06-17-14-24-30.png, Clipboard_2021-06-17-15-01-27.png]
+attachments: [Clipboard_2021-06-17-13-41-28.png, Clipboard_2021-06-17-14-09-04.png, Clipboard_2021-06-17-14-11-21.png, Clipboard_2021-06-17-14-18-01.png, Clipboard_2021-06-17-14-24-30.png, Clipboard_2021-06-17-15-01-27.png, Clipboard_2021-06-18-14-34-42.png, Clipboard_2021-06-18-14-34-55.png, Clipboard_2021-06-18-14-38-09.png, Clipboard_2021-06-18-14-40-08.png, Clipboard_2021-06-18-14-43-10.png]
 tags: [CS280]
-title: VIII-15-颜色模型
+title: VIII-15-1：颜色模型初步介绍
 created: '2021-06-15T14:44:59.646Z'
-modified: '2021-06-17T07:10:33.339Z'
+modified: '2021-06-18T06:46:55.141Z'
 ---
 
-# VIII-15-颜色模型
+# VIII-15-1：颜色模型初步介绍
 可见光谱：380~720nm
+----设计网站建议----
 强大的颜色网站(提供单色的四种扩展)：https://colourco.de/
 色轮网站(提供单色的两种扩展、对比色)：https://www.canva.com/colors/color-wheel/
 ##  Neal O'Grady颜色理论介绍
@@ -39,26 +40,15 @@ HSV：
 选定一个基色，然后你就可以找到它的两种暗色调与两种亮色调
 ![](@attachment/Clipboard_2021-06-17-14-11-21.png)
 
-## 颜色理论与色轮
-颜色理论主要从艺术与科学的角度探索的是哪些颜色组合在一起能获得最佳的视觉体验。色轮最早在1666年由牛顿用三棱镜发现
 
-### 色轮
-<img src="@attachment/Clipboard_2021-06-17-14-24-30.png"  width=150px  style="float: right;">
-色轮一般认为由12种颜色组成（虽然牛顿把光谱划分为7种颜色，但是严谨上靛色即Indigo并不被包括在内），如右图所示
-轮子的每个部分代表了一个颜色家族，可以通过不同的饱和度、色调、色调、深浅和相邻颜色的混合来实现
-<br>
-<br>
-<br>
-<br>
-<br>
-<img src="@attachment/Clipboard_2021-06-17-15-01-27.png"  width=150px  style="float: left;">
-红、黄、蓝是原色(Primary)。紫色、橙色和绿色是次色(Secdonary)。
-其他的都是三原色，是原色和次色的混合。
-设计使用色轮来选择色彩方案，其中有许多不同的类型。请看这里的五种:单色、互补、类比、三元和四(矩形或正方形)也有分裂互补方案。
 
-颜色搭配在一起看起来很好称为颜色和谐(Color Harmony)。
-设计师使用这些(方案)来创建特定的外观或感觉。设计师使用色轮通过使用色彩组合的规则来找到色彩的和谐。
-颜色组合决定了不同颜色的相对位置，以找到颜色，创造一个愉快(和谐)的效果
+
+
+
+
+
+
+
 
 
 
