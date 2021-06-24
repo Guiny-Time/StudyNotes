@@ -3,14 +3,17 @@ attachments: [Clipboard_2021-06-17-13-41-28.png, Clipboard_2021-06-17-14-09-04.p
 tags: [CS280]
 title: VIII-15-1：颜色模型初步介绍
 created: '2021-06-15T14:44:59.646Z'
-modified: '2021-06-18T06:46:55.141Z'
+modified: '2021-06-23T12:29:22.277Z'
 ---
 
 # VIII-15-1：颜色模型初步介绍
 可见光谱：380~720nm
-----设计网站建议----
-强大的颜色网站(提供单色的四种扩展)：https://colourco.de/
-色轮网站(提供单色的两种扩展、对比色)：https://www.canva.com/colors/color-wheel/
+<center>----设计网站建议----</center>
+
+<center>强大的颜色网站(提供单色的四种扩展)：https://colourco.de/</center>
+
+<center>色轮网站(提供单色的两种扩展、对比色)：https://www.canva.com/colors/color-wheel/</center>
+
 ##  Neal O'Grady颜色理论介绍
 三原色(RGB)：所有其他色度的基础
 三基色(CMY)：人类能感知三种基本颜色，相较于RGB能更好的还原人类感知到的色彩
