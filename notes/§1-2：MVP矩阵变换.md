@@ -1,9 +1,9 @@
 ---
 attachments: [Clipboard_2021-07-14-22-17-54.png, Clipboard_2021-07-14-23-39-02.png, Clipboard_2021-07-14-23-52-07.png, Clipboard_2021-07-14-23-55-22.png, Clipboard_2021-07-14-23-56-53.png, Clipboard_2021-07-14-23-58-01.png, Clipboard_2021-07-15-00-01-04.png, Clipboard_2021-07-15-00-02-39.png, Clipboard_2021-07-15-00-03-06.png, Clipboard_2021-07-15-00-04-37.png]
-tags: [图形学]
+tags: [Unity Shader]
 title: §1-2：MVP矩阵变换
 created: '2021-07-14T13:17:56.003Z'
-modified: '2021-07-14T17:43:20.292Z'
+modified: '2021-07-15T04:29:17.135Z'
 ---
 
 # §1-2：MVP矩阵变换
