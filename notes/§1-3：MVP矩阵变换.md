@@ -1,12 +1,12 @@
 ---
 attachments: [Clipboard_2021-07-14-22-17-54.png, Clipboard_2021-07-14-23-39-02.png, Clipboard_2021-07-14-23-52-07.png, Clipboard_2021-07-14-23-55-22.png, Clipboard_2021-07-14-23-56-53.png, Clipboard_2021-07-14-23-58-01.png, Clipboard_2021-07-15-00-01-04.png, Clipboard_2021-07-15-00-02-39.png, Clipboard_2021-07-15-00-03-06.png, Clipboard_2021-07-15-00-04-37.png]
 tags: [Unity Shader]
-title: §1-2：MVP矩阵变换
+title: §1-3：MVP矩阵变换
 created: '2021-07-14T13:17:56.003Z'
-modified: '2021-07-15T04:29:17.135Z'
+modified: '2021-07-15T09:30:35.257Z'
 ---
 
-# §1-2：MVP矩阵变换
+# §1-3：MVP矩阵变换
 
 ## 什么是MVP矩阵
 MVP三个字母指的分别是模型(Model)、观察(View)、投影(Projection), 分别代表三个矩阵。
