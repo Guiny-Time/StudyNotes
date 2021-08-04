@@ -1,12 +1,12 @@
 ---
 attachments: [Clipboard_2021-07-15-12-31-34.png, Clipboard_2021-07-15-12-34-59.png, Clipboard_2021-07-15-12-35-17.png, Clipboard_2021-07-15-13-10-29.png, Clipboard_2021-07-15-13-10-41.png, Clipboard_2021-07-15-13-40-12.png, Clipboard_2021-07-15-13-41-03.png, Clipboard_2021-07-15-14-31-22.png]
 tags: [Unity Shader]
-title: §2-1：UnityShader
+title: §2：UnityShader
 created: '2021-07-14T17:16:39.785Z'
-modified: '2021-07-15T08:50:48.535Z'
+modified: '2021-07-17T07:40:46.296Z'
 ---
 
-# §2-1：UnityShader
+# §2：UnityShader
 ## UnityShader概述
 我们如何才能使用UnityShader的魔法呢？答案是我们需要一个材质。在依托于材质之后，shader才能发挥自己的能力。
 
