@@ -3,15 +3,17 @@ attachments: [Clipboard_2021-07-14-22-17-54.png, Clipboard_2021-07-14-23-39-02.p
 tags: [Unity Shader]
 title: §1-3：MVP矩阵变换
 created: '2021-07-14T13:17:56.003Z'
-modified: '2021-07-15T09:30:35.257Z'
+modified: '2021-09-21T06:20:59.430Z'
 ---
 
 # §1-3：MVP矩阵变换
+什么是MVP矩阵？我们在写顶点着色器的时候经常遇到下列语句：
+```ShaderLab
+v2f o;                                  // 传输到片元着色器
+o.pos = UnityObjectToClipPos(v.vertex); // 将顶点坐标从模型空间(Object)转换到裁剪空间(Clip)
+```
+我们知道，顶点着色器最基本的功能就是将顶点坐标从模型空间转换到裁剪空间。这里的UnityObjectToClipPos函数的作用即将顶点坐标乘上MVP矩阵进行变化。MVP矩阵的三个字母指的是模型矩阵(Model)、观察矩阵(View)和投影矩阵(Projection)。
 
-## 什么是MVP矩阵
-MVP三个字母指的分别是模型(Model)、观察(View)、投影(Projection), 分别代表三个矩阵。
-
-### MVP基本流程
 一个物体在自己的模型空间(Local Space)有一个模型矩阵，转换到世界空间(World Space)之后有一个观察矩阵，再进入到摄像机所观察到的视觉空间(View Space)之后得到投影矩阵，组后进入裁剪空间(Clip Space)，经过投影映射获得屏幕空间视图(Screen Space)
 
 ### M(模型空间--->世界空间)
