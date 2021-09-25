@@ -3,10 +3,13 @@ attachments: [Clipboard_2021-07-14-22-17-54.png, Clipboard_2021-07-14-23-39-02.p
 tags: [Unity Shader]
 title: §1-3：MVP矩阵变换
 created: '2021-07-14T13:17:56.003Z'
-modified: '2021-09-21T06:20:59.430Z'
+modified: '2021-09-24T07:52:44.397Z'
 ---
 
 # §1-3：MVP矩阵变换
+<center><img src="https://raw.githubusercontent.com/Guiny-Time/PictureBed/main/20210924154412.png" width=800px/>
+<p>从观察者的观察空间投影到屏幕空间</p></center>
+
 什么是MVP矩阵？我们在写顶点着色器的时候经常遇到下列语句：
 ```ShaderLab
 v2f o;                                  // 传输到片元着色器
