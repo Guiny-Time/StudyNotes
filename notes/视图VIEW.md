@@ -1,8 +1,8 @@
 ---
-tags: [CS130]
+tags: [大二/CS130数据库]
 title: 视图VIEW
 created: '2021-01-04T16:23:12.686Z'
-modified: '2021-01-04T17:11:05.634Z'
+modified: '2021-09-27T02:16:49.016Z'
 ---
 
 # 视图VIEW

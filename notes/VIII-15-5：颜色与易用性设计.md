@@ -1,9 +1,9 @@
 ---
 attachments: [Clipboard_2021-06-18-20-41-05.png, Clipboard_2021-06-18-21-11-59.png, Clipboard_2021-06-18-21-13-51.png]
-tags: [CS280]
+tags: [大二/CS280UI、UX设计]
 title: VIII-15-5：颜色与易用性设计
 created: '2021-06-18T11:51:34.644Z'
-modified: '2021-06-18T13:19:32.703Z'
+modified: '2021-09-27T06:12:40.453Z'
 ---
 
 # VIII-15-5：颜色与易用性设计

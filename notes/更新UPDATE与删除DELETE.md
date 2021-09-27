@@ -1,8 +1,8 @@
 ---
-tags: [CS130]
+tags: [大二/CS130数据库]
 title: 更新UPDATE与删除DELETE
 created: '2021-01-04T07:42:41.097Z'
-modified: '2021-01-04T16:25:59.911Z'
+modified: '2021-09-27T02:16:44.512Z'
 ---
 
 # 更新UPDATE与删除DELETE

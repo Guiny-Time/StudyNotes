@@ -1,8 +1,8 @@
 ---
-tags: [CS130]
+tags: [大二/CS130数据库]
 title: 修改ALTER
 created: '2021-01-04T12:35:05.538Z'
-modified: '2021-01-04T13:51:43.974Z'
+modified: '2021-09-27T02:16:56.304Z'
 ---
 
 # 修改ALTER

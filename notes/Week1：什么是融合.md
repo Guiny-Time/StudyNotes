@@ -1,9 +1,9 @@
 ---
 attachments: [Clipboard_2021-04-25-14-26-33.png]
-tags: [MD225]
+tags: [大二/MD225编码媒介融合]
 title: Week1：什么是融合
 created: '2021-04-25T06:10:06.376Z'
-modified: '2021-04-26T12:27:41.534Z'
+modified: '2021-09-27T06:15:24.302Z'
 ---
 
 # Week1：什么是融合

@@ -1,9 +1,9 @@
 ---
 attachments: [Clipboard_2021-06-18-19-40-26.png]
-tags: [CS280]
+tags: [大二/CS280UI、UX设计]
 title: VIII-15-4：颜色与心理学
 created: '2021-06-18T11:06:22.035Z'
-modified: '2021-06-18T12:19:24.838Z'
+modified: '2021-09-27T06:12:46.487Z'
 ---
 
 # VIII-15-4：颜色与心理学

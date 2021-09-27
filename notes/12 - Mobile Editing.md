@@ -1,8 +1,8 @@
 ---
-tags: [Advanced, Notebooks/Tutorial]
+tags: [Notebooks/Tutorial]
 title: 12 - Mobile Editing
 created: '2018-12-16T23:46:58.649Z'
-modified: '2019-06-06T12:20:11.067Z'
+modified: '2021-09-27T02:11:45.215Z'
 ---
 
 # 12 - Mobile Editing

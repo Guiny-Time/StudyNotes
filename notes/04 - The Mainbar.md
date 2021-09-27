@@ -1,8 +1,8 @@
 ---
-tags: [Basics, Notebooks/Tutorial]
+tags: [Notebooks/Tutorial]
 title: 04 - The Mainbar
 created: '2019-03-12T15:20:40.393Z'
-modified: '2019-06-06T12:20:10.958Z'
+modified: '2021-09-27T02:11:30.191Z'
 ---
 
 # 04 - The Mainbar

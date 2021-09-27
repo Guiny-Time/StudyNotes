@@ -1,8 +1,8 @@
 ---
-tags: [CS130]
+tags: [大二/CS130数据库]
 title: 插入INSERT
 created: '2021-01-04T05:59:32.069Z'
-modified: '2021-01-04T16:18:13.030Z'
+modified: '2021-09-27T02:16:34.066Z'
 ---
 
 # 插入INSERT

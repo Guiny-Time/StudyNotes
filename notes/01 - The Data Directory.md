@@ -1,8 +1,8 @@
 ---
-tags: [Basics, Notebooks/Tutorial]
+tags: [Notebooks/Tutorial]
 title: 01 - The Data Directory
 created: '2018-12-16T21:43:52.886Z'
-modified: '2019-06-06T12:20:10.890Z'
+modified: '2021-09-27T02:11:23.712Z'
 ---
 
 # 01 - The Data Directory

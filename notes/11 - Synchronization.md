@@ -1,8 +1,8 @@
 ---
-tags: [Advanced, Notebooks/Tutorial]
+tags: [Notebooks/Tutorial]
 title: 11 - Synchronization
 created: '2018-12-16T23:15:11.439Z'
-modified: '2019-06-06T12:20:11.054Z'
+modified: '2021-09-27T02:11:43.513Z'
 ---
 
 # 11 - Synchronization

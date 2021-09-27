@@ -1,9 +1,9 @@
 ---
 attachments: [Clipboard_2021-06-17-13-41-28.png, Clipboard_2021-06-17-14-09-04.png, Clipboard_2021-06-17-14-11-21.png, Clipboard_2021-06-17-14-18-01.png, Clipboard_2021-06-17-14-24-30.png, Clipboard_2021-06-17-15-01-27.png, Clipboard_2021-06-18-14-34-42.png, Clipboard_2021-06-18-14-34-55.png, Clipboard_2021-06-18-14-38-09.png, Clipboard_2021-06-18-14-40-08.png, Clipboard_2021-06-18-14-43-10.png]
-tags: [CS280]
+tags: [大二/CS280UI、UX设计]
 title: VIII-15-1：颜色模型初步介绍
 created: '2021-06-15T14:44:59.646Z'
-modified: '2021-06-23T12:29:22.277Z'
+modified: '2021-09-27T06:12:50.791Z'
 ---
 
 # VIII-15-1：颜色模型初步介绍

@@ -1,9 +1,9 @@
 ---
 attachments: [Clipboard_2021-05-26-11-04-12.png]
-tags: [CS280]
+tags: [大二/CS280UI、UX设计]
 title: VII-14-可用性检查方法
 created: '2021-05-26T02:43:46.287Z'
-modified: '2021-06-15T14:46:39.898Z'
+modified: '2021-09-27T06:12:52.714Z'
 ---
 
 # VII-14-可用性检查方法

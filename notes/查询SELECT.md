@@ -1,8 +1,8 @@
 ---
-tags: [CS130]
+tags: [大二/CS130数据库]
 title: 查询SELECT
 created: '2021-01-04T05:41:02.881Z'
-modified: '2021-01-04T12:56:23.922Z'
+modified: '2021-09-27T02:16:41.479Z'
 ---
 
 # 查询SELECT

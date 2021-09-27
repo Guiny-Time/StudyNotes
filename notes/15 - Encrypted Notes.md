@@ -1,8 +1,8 @@
 ---
-tags: [Advanced, Notebooks/Tutorial]
+tags: [Notebooks/Tutorial]
 title: 15 - Encrypted Notes
 created: '2018-12-16T23:34:39.882Z'
-modified: '2019-06-06T12:20:11.113Z'
+modified: '2021-09-27T02:11:51.304Z'
 ---
 
 # 15 - Encrypted Notes

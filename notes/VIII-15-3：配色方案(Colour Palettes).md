@@ -1,9 +1,9 @@
 ---
 attachments: [Clipboard_2021-06-18-15-00-56.png, Clipboard_2021-06-18-15-14-04.png, Clipboard_2021-06-18-15-15-16.png, Clipboard_2021-06-18-15-19-14.png, Clipboard_2021-06-18-15-21-45.png, Clipboard_2021-06-18-15-25-12.png, Clipboard_2021-06-18-15-27-27.png, Clipboard_2021-06-18-15-28-42.png, Clipboard_2021-06-18-15-29-33.png, Clipboard_2021-06-18-15-30-26.png, Clipboard_2021-06-18-15-30-44.png]
-tags: [CS280]
+tags: [大二/CS280UI、UX设计]
 title: VIII-15-3：配色方案(Colour Palettes)
 created: '2021-06-18T06:48:09.954Z'
-modified: '2021-06-18T11:10:56.079Z'
+modified: '2021-09-27T06:12:44.407Z'
 ---
 
 # VIII-15-3：配色方案(Colour Palettes)
