@@ -1,12 +1,12 @@
 ---
-attachments: [Clipboard_2021-07-14-23-39-02.png, Clipboard_2021-07-14-23-52-07.png, Clipboard_2021-07-14-23-55-22.png, Clipboard_2021-07-14-23-56-53.png, Clipboard_2021-07-14-23-58-01.png, Clipboard_2021-07-15-00-01-04.png, Clipboard_2021-07-15-00-02-39.png, Clipboard_2021-07-15-00-03-06.png, Clipboard_2021-07-15-00-04-37.png]
+attachments: [Clipboard_2021-07-14-23-39-02.png]
 tags: [Shader/Unity Shader]
-title: §1-3：MVP矩阵变换
+title: §1-3：坐标空间与MVP矩阵变换
 created: '2021-07-14T13:17:56.003Z'
-modified: '2021-09-27T02:15:24.423Z'
+modified: '2021-09-28T14:42:02.227Z'
 ---
 
-# §1-3：MVP矩阵变换
+# §1-3：坐标空间与MVP矩阵变换
 <center><img src="https://raw.githubusercontent.com/Guiny-Time/PictureBed/main/20210924154412.png" width=800px/>
 <p>从观察者的观察空间投影到屏幕空间</p></center>
 
@@ -120,6 +120,7 @@ $$
 ### 观察矩阵V
 &emsp;&emsp;以这个摄像机为例：
 <img src="https://raw.githubusercontent.com/Guiny-Time/PictureBed/main/20210926171746.png" width=190/><img src="https://raw.githubusercontent.com/Guiny-Time/PictureBed/main/20210926171828.png" width=441/>
+
 $$V = 
 \begin{pmatrix}
    1         & 0      & 0     & 0 \\
@@ -183,57 +184,66 @@ $$
 &emsp;&emsp;同样，由于计算太过繁琐，我用 $V$ 来指代运算的结果，这是个4*4的矩阵。将物体的世界坐标乘以 $V$ 就可以得到观察空间下的坐标。
 
 ## 观察空间--->裁剪空间
-这一步并不是真正的投影(三维的游戏物体投影到屏幕的二维坐标)，只是为投影做准备。裁剪空间的目的是判断顶点是否在可见范围内
-变换步骤：
-- 对x、y、z分量进行缩放，用w分量作为范围值
-- 如果x、y、z分量都在w范围内，则该点位于裁剪空间内
+&emsp;&emsp;这一步**并不是真正的投影(三维的游戏物体投影到屏幕的二维坐标)，只是为投影做准备**。真正的投影发生在屏幕映射的齐次除法中。裁剪空间的主要目的是判断顶点是否在可见范围内（利用w分量划定了范围，实际上就是视锥体的范围）。当一个物体部分满足范围时，它将被**裁剪**；而当一个物体完全不满足范围时，它将被**剔除**。
+#### 视锥体
+&emsp;&emsp;什么是视锥体？使用过unity相机，或者其他建模软件中的相机的人，在gizmos模式下点击相机的时候都能看到金字塔一样的线框（下左），或者长方形一样的线框（下右）：
+<img src="https://raw.githubusercontent.com/Guiny-Time/PictureBed/main/20210928213302.png" width=300/><img src="https://raw.githubusercontent.com/Guiny-Time/PictureBed/main/20210928213535.png" width=365/>
+&emsp;&emsp;其中，左图的金字塔结构就是**透视投影**下的视锥体，而右图是**正交投影**下的视锥体。二者的区别在于是否产生透视的效果，前者能够带来近大远小的物理上的真实感，而后者则没有这种效果，不论远近所有物体看起来都没有形变。啊哈，这不是某种程度上意味着透视适合3D，而正交适合2D吗？确实，这也是为什么我们创建一个新项目时，2D项目的相机默认是正交投影而3D项目默认是透视投影的原因。
+&emsp;&emsp;首先，我们来了解一下视锥体的几个基本参数！
 
+// 插入手绘示意图
+
+&emsp;&emsp;除了上面标注出来的视场(FoV)、近裁平面高度(nearClipPlaneHeight)、远裁平面高度(farClipPlaneHeight)、近裁面距离(Near)、远裁面距离(Far)之外，我们要怎么知道宽度信息呢？比如说近裁平面宽度什么的，但是我们的横截面只能告诉我们高度信息。为了解决这个问题，我们引入了一个新的量叫做横纵比(Aspect，顾名思义是横和纵的比值)：
+$$Aspect = \frac{nearClipPlaneWidth}{nearClipPlaneHeight}$$
+$$Aspect = \frac{farClipPlaneWidth}{farClipPlaneHeight}$$
+
+### 投影矩阵
 #### 透视投影
-透视投影常用于3D游戏，其特点是实现近大远小的效果。其P矩阵如下：
-![](@attachment/Clipboard_2021-07-14-23-52-07.png)
-这就是一个恒定的公式，推导过程挺复杂的(我相信我没有这个兴趣)
-> 公式中的符号解析
->- **Near**
-摄像机的近裁平面
->- **Far**
-摄像机的远裁平面
->- **FOV**
-摄像机的可视范围
-![](@attachment/Clipboard_2021-07-14-23-55-22.png)
->- **近裁平面高度、远裁平面高度**
-其实就是简单的数学计算
-![](@attachment/Clipboard_2021-07-14-23-56-53.png)
->- **Ascept**
-是一个比值，近裁平面宽比上近裁平面高或者远裁平面宽比上远裁平面高
-![](@attachment/Clipboard_2021-07-14-23-58-01.png)
+<img src="https://raw.githubusercontent.com/Guiny-Time/PictureBed/main/20210928215534.png" width=400/>
 
-之后，当三个分量的范围都在w范围内则该点位于裁剪空间内
-![](@attachment/Clipboard_2021-07-15-00-01-04.png)
+&emsp;&emsp;通过上述的参数（我们可以直接在Unity中设置，如上图）以及Camera.aspect更改/获取的横纵比，我们可以推导出以下投影矩阵 $P$
+$$P = 
+\begin{pmatrix}
+   \frac{\cot_{\frac{FOV}{2}}}{Ascept}    & 0                       & 0                                 & 0 \\
+   0                                      & \cot_{\frac{FOV}{2}}    & 0                                 & 0 \\
+   0                                      & 0                       & -\frac{Far + Near}{Far - Near}    & -\frac{2 \cdot Near \cdot Far}{Far - Near} \\
+   0                                      & 0                       & -1                                & 0
+\end{pmatrix}
+$$
+&emsp;&emsp;这是一个恒定的公式，推导过程挺复杂的，这里不细说（之后有空感兴趣研究的话再补充）。将投影矩阵乘上点/向量的观察空间坐标之后我们得到了裁剪空间坐标，现在我们要开始判断这个东西应不应该被剔除了。
+&emsp;&emsp;计算完成后，我们得到了结果$\begin{pmatrix}x\\y\\z\\w\end{pmatrix}$。当三个分量x、y、z的范围都在±w范围内时，我们认为该点位于裁剪空间内，即：
+$$-w \leqslant x \leqslant w$$
+$$-w \leqslant y \leqslant w$$
+$$-w \leqslant z \leqslant w$$
 
 #### 正交投影
-正交投影常用于2D游戏，因为不论远近同一个物体看起来都是一样大的。其P矩阵如下：
-![](@attachment/Clipboard_2021-07-15-00-04-37.png)
+&emsp;&emsp;我们知道，正交投影常用于2D游戏，因为不论远近同一个物体看起来都是一样大的。同样的，我们可以在检查器中调整视锥体的相关参数。
+<img src="https://raw.githubusercontent.com/Guiny-Time/PictureBed/main/20210928221640.png" width=400/>
 
-> 公式中的符号解析
->- **Near**
-摄像机的近裁平面
->- **Far**
-摄像机的远裁平面
->- **Size**
-摄像机的可视范围
-![](@attachment/Clipboard_2021-07-15-00-02-39.png)
->- **近裁平面高度、远裁平面高度**
-其实就是简单的数学计算
-![](@attachment/Clipboard_2021-07-15-00-03-06.png)
->- **Ascept**
-是一个比值，近裁平面宽比上近裁平面高或者远裁平面宽比上远裁平面高
-![](@attachment/Clipboard_2021-07-14-23-58-01.png)
+&emsp;&emsp;因为正交投影的近裁面和远裁面大小一致，所以我们不再有近裁平面高度这样的参数，而是用Size代替。Size的大小为原本近裁平面高度的一半。正交投影的 $P$ 矩阵如下：
+$$P = 
+\begin{pmatrix}
+   \frac{1}{Ascept \cdot Size}    & 0                 & 0                        & 0 \\
+   0                              & \frac{1}{Size}    & 0                        & 0 \\
+   0                              & 0                 & -\frac{2}{Far - Near}    & -\frac{Far + Near}{Far - Near} \\
+   0                              & 0                 & 0                        & 1
+\end{pmatrix}
+$$
+&emsp;&emsp;计算完成后，我们得到了结果$\begin{pmatrix}x\\y\\z\\w\end{pmatrix}$。同样的，当三个分量x、y、z的范围都在±w范围内时，我们认为该点位于裁剪空间内，即：
+$$-w \leqslant x \leqslant w$$
+$$-w \leqslant y \leqslant w$$
+$$-w \leqslant z \leqslant w$$
 
-之后，当三个分量的范围都在w范围内则该点位于裁剪空间内
-![](@attachment/Clipboard_2021-07-15-00-01-04.png)
-
-
-
-
+## 裁剪空间--->屏幕空间
+&emsp;&emsp;已经经过MVP矩阵的变换了，现在离屏幕已经非常近了。处于裁剪空间中的物体依然是三维的（位于视锥体内），现在我们需要使用**齐次除法**(Homogeneous Devision)将视锥体变成一个正方体。
+&emsp;&emsp;什么是齐次除法？这个名字听起来仿佛深渊沼泽里的骇人美人鱼。实际上这个降维投影的操作非常简单，只需要对物体的x、y、z分量分别除以w，即投影后物体的坐标为：
+$$\begin{pmatrix}\frac{x}{w}  \\
+                 \frac{y}{w}  \\
+                 \frac{z}{w}
+\end{pmatrix}$$
+&emsp;&emsp;最后，进行屏幕映射（pixelWidth即像素宽度，指的是屏幕分辨率中的宽。我们也可以通过Unity设置分辨率来实现不同分辨率下的屏幕映射结果）：
+$$screen_{x} = \frac{clip_{x} \cdot pixelWidth}{2 \cdot clip_{x}} + \frac{pixelWidth}{2}$$
+$$screen_{y} = \frac{clip_{y} \cdot pixelHeight}{2 \cdot clip_{y}} + \frac{pixelHeight}{2}$$
+&emsp;&emsp;这个坐标$(screen_{x}, screen_{y})$就是最终投影在屏幕上的像素坐标，z坐标不被处理，它将被用于深度缓冲等模块。
 
 
