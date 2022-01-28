@@ -2,7 +2,7 @@
 tags: [语言学习/C++]
 title: C++速成：基本语法
 created: '2022-01-28T16:12:49.043Z'
-modified: '2022-01-28T18:56:51.063Z'
+modified: '2022-01-28T18:59:20.776Z'
 ---
 
 # C++速成：基本语法
@@ -82,7 +82,23 @@ int main() {
     return 0;
 }
 ```
-处于main函数之外的变量value即全局变量，所有处于std命名空间下的函数都可以使用和更改value的值。如果我们不希望其他函数更改全局变量的值，可以在前面加上constant关键字。
+处于main函数之外的变量value即全局变量，所有处于std命名空间下的函数都可以使用和更改value的值。如果我们不希望其他函数更改全局变量的值，可以在前面加上constant关键字：
+```C++
+#include <iostream>
+using namespace std;
+
+constant int value = 1;
+
+int main() {
+    int x = 10;
+    x = x + value;
+    value++;
+    x = x + value;
+    cout << x << endl;    // 12
+
+    return 0;
+}
+```
 处于main函数内的变量x就是main函数下的局部变量，我们无法在外部使用x。
 
 
