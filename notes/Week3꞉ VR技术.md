@@ -1,9 +1,9 @@
 ---
 attachments: [Clipboard_2021-09-23-15-19-04.png, Clipboard_2021-09-23-15-45-23.png, Clipboard_2021-09-23-15-50-15.png, Clipboard_2021-09-23-15-53-26.png, Clipboard_2021-09-23-15-56-15.png, Clipboard_2021-09-23-15-59-30.png, Clipboard_2021-09-23-16-09-53.png, Clipboard_2021-09-23-16-10-07.png]
-tags: [CS423]
+tags: [大三/CS423]
 title: 'Week3: VR技术'
 created: '2021-09-23T07:14:15.434Z'
-modified: '2021-09-23T08:19:23.189Z'
+modified: '2022-01-12T09:03:35.156Z'
 ---
 
 # Week3: VR技术

@@ -1,9 +1,9 @@
 ---
 attachments: [Clipboard_2021-09-12-05-03-02.png, Clipboard_2021-09-12-05-05-38.png, Clipboard_2021-09-12-05-09-47.png, Clipboard_2021-09-12-06-03-29.png]
-tags: [CS423]
+tags: [大三/CS423]
 title: 'Week2-1: 沉浸感和存在感·Immersion & Presence'
 created: '2021-09-11T20:51:59.675Z'
-modified: '2021-09-11T22:07:45.926Z'
+modified: '2022-01-12T09:03:38.224Z'
 ---
 
 # Week2-1: 沉浸感和存在感·Immersion & Presence

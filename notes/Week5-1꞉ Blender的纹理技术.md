@@ -1,8 +1,8 @@
 ---
-tags: [CS423]
+tags: [大三/CS423]
 title: 'Week5-1: Blender的纹理技术'
 created: '2021-10-11T05:55:40.299Z'
-modified: '2021-10-11T06:09:06.532Z'
+modified: '2022-01-12T09:03:33.528Z'
 ---
 
 # Week5-1: Blender的纹理技术

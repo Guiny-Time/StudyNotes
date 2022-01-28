@@ -1,7 +1,8 @@
 ---
+tags: [经验分享]
 title: Oculus Quest电脑端有线连接教程
 created: '2021-10-25T13:40:32.977Z'
-modified: '2021-10-25T13:58:30.745Z'
+modified: '2022-01-14T07:52:42.392Z'
 ---
 
 # Oculus Quest电脑端有线连接教程

@@ -1,9 +1,9 @@
 ---
 attachments: [Clipboard_2021-09-12-06-18-52.png, Clipboard_2021-09-12-06-21-13.png, Clipboard_2021-09-12-06-26-23.png, Clipboard_2021-09-12-06-26-26.png, Clipboard_2021-09-12-06-31-48.png]
-tags: [CS423]
+tags: [大三/CS423]
 title: 'Week2-2: 模拟知觉·Simulate The Scenes'
 created: '2021-09-11T22:08:11.273Z'
-modified: '2021-09-11T23:02:51.246Z'
+modified: '2022-01-12T09:03:36.695Z'
 ---
 
 # Week2-2: 模拟知觉·Simulate The Scenes
