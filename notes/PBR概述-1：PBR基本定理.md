@@ -2,11 +2,11 @@
 tags: [TA/次世代渲染]
 title: PBR概述-1：PBR基本定理
 created: '2021-11-12T10:21:57.373Z'
-modified: '2021-12-03T08:18:08.032Z'
+modified: '2022-11-20T14:00:14.244Z'
 ---
 
 # PBR概述-1：PBR基本定理
-第一次参加TA的面试，面试官上来几个问题还能答上来，结果问到PBR给卡住了，因为之前了解过一些但还没有深入看过。通过这次面试知道了PBR作为次世代渲染的基础非常重要，是每个TA必须掌握的技能。于是我打算专门开个新的专栏来写PBR相关的笔记，避免下次踩坑。
+https://tvax3.sinaimg.cn/large/006UcwnJly1h8blx4xdnqj30xu1akq7e.jpg
 
 # 概述
 PBR指的是Physically-Based Rendering，即基于物理的渲染，能够在不同的光照环境下展示出真实正确的效果从而更精确的描绘光和表面之间的作用，分为Metallic/Roughness工作流和Specular/Glossiness工作流两种工作流。PBR最重要的三个东西是：

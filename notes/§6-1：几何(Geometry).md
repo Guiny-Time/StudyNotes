@@ -3,11 +3,11 @@ attachments: [Ch16꞉ 概率模型.md]
 tags: [TA/Unity Shader]
 title: §6-1：几何(Geometry)
 created: '2022-10-15T09:30:54.419Z'
-modified: '2022-10-17T02:35:30.041Z'
+modified: '2022-10-18T03:52:12.323Z'
 ---
 
 # §6-1：几何(Geometry)
-## 隐式几何(Implicit Geometry)
+# 隐式几何(Implicit Geometry)
 隐式几何给出一或多组关系式，满足该关系式(组)的点在该几何体上。例如空间中有一个半径为1，中心在原点的球，它的表达式为:
 $$x^2+y^2+z^2 = 1$$
 这个表达式就是球的隐式几何表达的一种，可以画出实际形状（球）。
@@ -16,7 +16,7 @@ $$x^2+y^2+z^2 = 1$$
 - 隐式几何能快速判断点/线/面与当前几何的关系
 - 适合光线求焦、处理拓扑结构等应用
 
-### 其他隐式几何的表达方式
+## 其他隐式几何的表达方式
 在数学公式之外还有别的隐式方法能表示一个几何体:
 1. **构造实体几何**
 这是一种很有趣的表示几何的方式，它的思维是将几种基础几何形体（例如圆柱、圆锥、球、立方体等）进行交并补等操作得到一个新的几何体。下图的几何体，如果用 $\textcolor{Red}A$ 表示红色立方体，$\textcolor{Blue}B$ 表示蓝色球，$\textcolor{LimeGreen}{C1, C2, C3}$ 表示绿色圆柱，则有$(A\cap B)/((C1\cup C2)\cup C3)$
@@ -30,7 +30,7 @@ $$x^2+y^2+z^2 = 1$$
 分形几何是一门学问..自然界中有许多天然存在的分形，比如说雪花、螺壳的纹路等等。
 <img src="https://tva1.sinaimg.cn/large/006UcwnJly1h76c3yim51j32z01o77wl.jpg" alt="螺壳。2021年6月Bing壁纸" width="852" data-width="3852" data-height="2167">
 
-## 显式几何(Explicit Geometry)
+# 显式几何(Explicit Geometry)
 显式几何有两种形式：
 1. 画出每个点
 2. 参数映射
@@ -60,7 +60,7 @@ f 5/1/1 1/2/1 4/3/1
 
 接下来介绍一些显式几何及其表述方式。
 
-### 贝塞尔曲线(de Casteljau算法)
+## 贝塞尔曲线(de Casteljau算法)
 贝塞尔曲线是一种参数表示的显式几何。它应用于很多场合，例如矢量字体、PhotoShop中的钢笔、动画的智能补间/运动轨迹等等。德卡斯特里奥算法是实现贝塞尔曲线的算法之一，他是怎么实现的呢？
 给定三个点 $b_0,b_1,b_2$ 就可以画出一条贝塞尔曲线了，这种贝塞尔曲线叫**二次贝塞尔曲线**。假设我们现在要寻找贝塞尔曲线上一点 $t$ 在什么位置：
 1. 将贝塞尔曲线“拉直”，画出 $t$ 在曲线上的位置，然后在 $b_0 b_1$ 和 $b_1 b_2$ 两条线段找到 $t$ 的相对位置。其中 $b_0^1 = (1-t)b_0 + tb_1$，$b_1^1 = (1-t)b_1 + tb_2$
@@ -81,7 +81,7 @@ f 5/1/1 1/2/1 4/3/1
 - **凸包性质**：贝塞尔曲线一定在控制点形成的凸包(Convec Hull)内
 <img src="https://tva4.sinaimg.cn/large/006UcwnJly1h7742hcmayj30ae04wwes.jpg" alt="image" width="300" data-width="374" data-height="176">
 
-#### 伯恩斯坦多项式(Bernstein Polynomial)
+### 伯恩斯坦多项式(Bernstein Polynomial)
 如果**用代数的方法**表示二次贝塞尔曲线呢？
 - 第一层：$b_0^1 = (1-t)b_0 + tb_1$，$b_1^1 = (1-t)b_1 + tb_2$，$b_2^1 = (1-t)b_2 + tb_3$
 - 第二层：$b_0^2 = (1-t)b_0^1 + tb_1^1$，$b_1^2 = (1-t)b_1^1 + tb_2^1$
@@ -93,7 +93,7 @@ $$b^{n}(t) = b_0^{n}(t) = \sum_{j=0}^{n}b_j B_j^{n}(t)$$
 $b_0^{n}(t)$ 表示贝塞尔曲线上的第 $n$ 个点，$b_j$ 表示第 $j$ 个控制点，$B_j^{n}(t)$ 即伯恩斯坦多项式。伯恩斯坦多项式描述了一个**二项分布** [概率模型](@note/Ch16: 概率模型.md)：
 $$B_j^{n}(t) = \begin{pmatrix} n \\ i \end{pmatrix} t^i (1-t)^{n-i}$$
 
-### 逐段贝塞尔曲线(Piecewise Bezier Curves)
+## 逐段贝塞尔曲线(Piecewise Bezier Curves)
 当有很多检查点的时候，贝塞尔曲线的效果可能不是那么明显（或者说，长得和直线一样，难以描述复杂形状）。因此可以给检查点分组，分别表示多段贝塞尔曲线，然后再把它们连起来。有逐段贝塞尔曲线后就可以表示复杂的曲线了，例如字体、钢笔工具、Adobe Illustrator等等。
 <img src="https://tva2.sinaimg.cn/large/006UcwnJly1h774d9412vj30b408ctad.jpg" alt="image" width="350" data-width="400" data-height="300">
 
@@ -108,12 +108,12 @@ $$B_j^{n}(t) = \begin{pmatrix} n \\ i \end{pmatrix} t^i (1-t)^{n-i}$$
 第一段的终止点和第二段的起点相连的这种情况叫做 $C^0$ 连续。当第一段的第3、4个控制点和第二段的第1、2个控制点之间的距离是一样的时候叫做 $C^1$ 连续。
 逐段贝塞尔曲线可以画出复杂的曲线，但它也有“**牵一发而动全身**”的问题。为了避免一点小改动影响整根曲线，接下来介绍的是：
 
-### B-样条
+## B-样条
 B-样条是奇函数样条的缩写。样条指的是用一系列点规范出一条曲线的方式，听起来和贝塞尔曲线非常像，但相比于贝塞尔曲线**需要更多的点信息**，单一控制点影响的范围非常有限。
 好吧...games101没有聊到这个。在接下来清华图形学的学习中会补充这边。
 
-## 曲面(Surface)
-### 贝塞尔曲面
+# 曲面(Surface)
+## 贝塞尔曲面
 贝塞尔曲面由4 * 4一共16个控制点组成，表现为一个3 * 3的网格：
 
 <img src="https://tva1.sinaimg.cn/large/006UcwnJly1h782pobli6j30ea0es41u.jpg" alt="image" width="314" data-width="514" data-height="532">
@@ -124,4 +124,71 @@ B-样条是奇函数样条的缩写。样条指的是用一系列点规范出一
 3. 这条线扫的过程就会得到贝塞尔曲面
 
 <img src="https://tva1.sinaimg.cn/large/006UcwnJly1h782xfavqfj30qz0j241k.jpg" alt="第一步" width="300" data-width="971" data-height="686" style="display:inline"><img src="https://tvax3.sinaimg.cn/large/006UcwnJly1h782ydz35vj30qs0j7wgx.jpg" alt="第二步" width="300" data-width="964" data-height="691" style="display:inline"><img src="https://tva3.sinaimg.cn/large/006UcwnJly1h782z4skdlj30s90jdtdt.jpg" alt="第三步" width="300" data-width="1017" data-height="697" style="display:inline">
+
+## 曲面细分(Mesh Subdivision)
+有一类可编程的着色器专门处理细分网格的功能，这就是曲面细分着色器，不过它是一种可选可不选的着色器，不像顶点着色器或片元着色器那么重要。曲面细分有什么实现的方法呢？
+
+## Loop细分
+
+<img src="https://tva1.sinaimg.cn/large/006UcwnJly1h78edfy9cuj308f082t9u.jpg" alt="image" width="303" data-width="303" data-height="290">
+
+{% note info simple %}
+**请注意**
+**Loop是发明该方法的人的姓，并不代表该细分方法与循环有关。**
+{% endnote %}
+
+Loop细分是实现曲面细分的最基本的方法之一。对于任意一个三角形，可以取三边的中点连线，在内部得到一个新的三角形
+<img src="https://tva3.sinaimg.cn/large/006UcwnJly1h78cqo6gpqj30jt06xwf0.jpg" alt="image" width="413" data-width="713" data-height="249">
+
+三边中点我们可以划归成“**新的一组顶点**”，之前的三个顶点则是“**旧的一组顶点**”。其中，当两个三角形相接时，一定会有一个中点在两个三角形的共边上：
+
+<img src="https://tva1.sinaimg.cn/large/006UcwnJly1h78cxm4tetj309c08q3yx.jpg" alt="image" width="236" data-width="336" data-height="314">
+
+共边中点的新位置即共边顶点的 $\frac{3}{8}$ 加上非共边顶点的 $\frac{1}{8}$，是一个加权平均的操作。诶那你可能会问剩下两个中点怎么办？那简单呀我们再找和它共边的三角形，然后再对其加权平均就可以了。
+处理完“新的顶点”，还剩下“旧的顶点”，该怎么处理旧顶点呢？
+
+<img src="https://tvax3.sinaimg.cn/large/006UcwnJly1h78duqjl03j30rs090mzi.jpg" alt="image" width="800" data-width="1000" data-height="324">
+
+上图右侧的白点表示一个旧的顶点。找到所有与其相连的顶点，定义顶点的度 $n$ (drgree，就是和顶点相连的点的数量，例如上图 $n=6$ )和与度有关系的数 $u$ ，可以对旧顶点原本的位置和相邻旧顶点的位置进行加权平均。
+
+## Catmull-Clark细分
+
+<img src="https://tva3.sinaimg.cn/large/006UcwnJly1h78eaaiufuj30j905w40i.jpg" alt="image" width="693" data-width="693" data-height="212">
+
+Loop细分只能用于三角形面的细分，但有的时候mesh比较不清楚，又有三角形又有四边形，这时候Catmull-Clark细分就能比较好的处理网格。定义两个新概念：
+1. 奇异点：一个顶点的$n \ne 4$
+2. 非四边面：一个面不是四边形的，可以是三角形也可以是其他多边形
+
+<img src="https://tvax4.sinaimg.cn/large/006UcwnJly1h78el5jg6hj30vr0mpzns.jpg" alt="image" width="443" data-width="1143" data-height="817">
+
+Catmull-Clark细分的连线方式是将面中心的点与面各边的中点相连。对于四边形面，中心的点 $f$ 遵守 $f = \frac{v_1 + v_2 + v_3 + v_4}{4}$ ，即周围四个点的平均。边中点 $e$ 则遵守 $e = \frac{v_1 + v_2 + f_1 + f_2}{4}$ ，即边顶点与中心的点的平均。边顶点 $v$ 遵守 $v = \frac{f_1 + f_2 + f_3 + f_4 + 2(e_1 + e_2 + e_3 + e_4) + 4v}{16}$ 的加权平均。下面三张图反应了位置关系，需要注意的是第三张图的 $m$ 替换成 $e$，&p& 替换成 $v$。
+
+<img src="https://tvax1.sinaimg.cn/large/006UcwnJly1h799g54trzj309l09qmxe.jpg" alt="image" width="145" data-width="345" data-height="350" style="display:inline"><img src="https://tvax3.sinaimg.cn/large/006UcwnJly1h799gvnt9vj30bk09oglz.jpg" alt="image" width="175" data-width="416" data-height="348" style="display:inline"><img src="https://tva2.sinaimg.cn/large/006UcwnJly1h799hsuj95j30ab0an3z8.jpg" alt="image" width="171" data-width="371" data-height="383" style="display:inline">
+
+## 曲面简化(Mesh Simplification)
+我在Sketchfab上找到了一个很nice的模型：
+<div class="sketchfab-embed-wrapper"> <iframe title="Fox & Robin" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/17c9108a19884b7c9a5f0e65130b4af1/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/fox-robin-17c9108a19884b7c9a5f0e65130b4af1?utm_medium=embed&utm_campaign=share-popup&utm_content=17c9108a19884b7c9a5f0e65130b4af1" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Fox & Robin </a> by <a href="https://sketchfab.com/Mayleemouse.?utm_medium=embed&utm_campaign=share-popup&utm_content=17c9108a19884b7c9a5f0e65130b4af1" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Mayleemouse. </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=17c9108a19884b7c9a5f0e65130b4af1" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+
+但是我的游戏是low poly风格的，这个狐狸的面数太高了，直接放到游戏里很违和。我希望狐狸应该是这个样子的：
+<div class="sketchfab-embed-wrapper"> <iframe title="Low poly fox by PixelMannen (Animated)" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/371dea88d7e04a76af5763f2a36866bc/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/low-poly-fox-by-pixelmannen-animated-371dea88d7e04a76af5763f2a36866bc?utm_medium=embed&utm_campaign=share-popup&utm_content=371dea88d7e04a76af5763f2a36866bc" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Low poly fox by PixelMannen (Animated) </a> by <a href="https://sketchfab.com/tomkranis?utm_medium=embed&utm_campaign=share-popup&utm_content=371dea88d7e04a76af5763f2a36866bc" target="_blank" style="font-weight: bold; color: #1CAAD9;"> tomkranis </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=371dea88d7e04a76af5763f2a36866bc" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+
+但是新找到的模型头上没有小鸟，而且重复找模型真的很麻烦。有没有办法把一个高面数的模型直接降低面数变成low poly风格呢？或者在LOD的应用里，如何获取模型不同面数等级的子模型来实现LOD来降低性能开销呢？
+
+### 边坍缩(Edge Collapsing)
+<img src="https://tvax2.sinaimg.cn/large/006UcwnJly1h79ah3kwfdj327k0p87cn.jpg" alt="image" width="864" data-width="2864" data-height="908">
+
+寻找需要坍缩的边，把边两端的顶点捏在一起形成新的顶点，同时减少了面数的一种方法。判断边是否需要探索的算法叫做**二次误差度量(Quadric Error Metrics)**。二次度量误差指探索完的顶点经过一定的调整，找到一个到周围其他面的垂直距离的平方和最小的位置，平方和即误差值，**值越小表示坍缩该边对mesh的影响最小**。那么寻找需要坍缩的边的做法就是：
+1. 计算每条边的二次度量误差并排序
+2. 坍缩二次度量误差值最小的边
+3. 更新坍缩边所影响的边的二次度量误差值（由于坍缩，周围的边也发生的变化，因此需要重新计算），重新排序
+
+这里的动态取最小的数据结构可以是小顶堆或优先队列。
+
+
+
+
+
+
+
+
 
