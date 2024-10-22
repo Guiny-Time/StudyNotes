@@ -2,12 +2,12 @@
 tags: [TA/Unity Shader]
 title: 常见Blur的实现与分析
 created: '2023-05-12T10:32:56.516Z'
-modified: '2023-05-12T14:07:43.817Z'
+modified: '2024-10-22T09:35:04.593Z'
 ---
 
 # 常见Blur的实现与分析
 
-最近和嘟嘟猪有一个新的空岛游戏的想法，在场景设计的讨论上我提出可以用移轴模糊实现出low poly小人国的效果（不知道实际应用好不好看，因为模型本身就比较小），正好可以借此机会尝试一下写一些后处理shader，在此祭出浅墨老师的常见blur效果对比分析图：
+最近有一个新的空岛游戏的想法，在场景设计的讨论上我提出可以用移轴模糊实现出low poly小人国的效果（不知道实际应用好不好看，因为模型本身就比较小），正好可以借此机会尝试一下写一些后处理shader，在此祭出浅墨老师的常见blur效果对比分析图：
 
 <img src="https://image.baidu.com/search/down?url=https://tvax3.sinaimg.cn/large/006UcwnJly1hdvs5o3b6yj31130r71gk.jpg" alt="image.png" title="image.png" width=600 />
 

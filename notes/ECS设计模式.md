@@ -3,11 +3,10 @@ attachments: [Clipboard_2024-10-10-13-08-10.png, Clipboard_2024-10-10-13-09-31.p
 tags: [游戏开发/通用]
 title: ECS设计模式
 created: '2024-10-09T08:46:47.608Z'
-modified: '2024-10-15T09:32:22.587Z'
+modified: '2024-10-16T03:30:04.809Z'
 ---
 
 # ECS设计模式
-![](https://docs.unity3d.com/Packages/com.unity.entities@0.3/manual/images/WhatIsECSinfographic0000.png)
 ![](https://miro.medium.com/v2/resize:fit:795/1*u4_kgaIkyGWY5r0ijLazeQ.png)
 
 # 什么是ECS？为什么我们需要它？
